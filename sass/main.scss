@@ -405,6 +405,9 @@ body {
   .giphy-logo {
     width: 45% !important;
   }
+  button.mobile-menu {
+    display: block;
+  }
 }
 .hamburger:hover {
   cursor: pointer;
@@ -429,7 +432,15 @@ body {
   transform: translateY(-13px) rotate(-45deg);
 }
 button.mobile-menu {
+  display: none;
   background: transparent;
   border: none;
-  padding-right: 10px;
+}
+@media all and (max-width: 815px) {
+  .giphy-logo {
+    width: 45% !important;
+  }
+  button.mobile-menu {
+    display: block;
+  }
 }
