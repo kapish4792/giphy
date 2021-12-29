@@ -101,7 +101,7 @@ body {
 }
 
 .dropd {
-  width: 100%;
+  width: 50%;
   background: #3e3e3e;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,21 +236,22 @@ body {
 }
 
 .uplode-buttons {
-  margin: 5px 10px 0 5px;
-}
-
-.uplode-buttons .uplode {
-  margin-right: 5px;
-}
-
-.uplode-buttons .uplode-button button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 14px;
+  margin-right: 10px;
+  background-size: 200% 50%;
   background: linear-gradient(103deg, #6157ff, #7067ff, #6157ff);
-  border-radius: 0;
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 0.5rem;
+}
+
+.uplode-buttons a {
+  padding: 8.5px 16px;
+}
+
+.uplode-buttons a:first-child {
+  border-right: 4px solid #000;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -292,7 +293,7 @@ body {
   transition: 0.3s;
   opacity: 1;
   visibility: visible;
-  top: 130%;
+  top: 125%;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
   padding: 0;
@@ -319,7 +320,7 @@ body {
 }
 
 .navbar .megamenu {
-  left: -40%;
+  left: -34%;
   right: 0;
   width: 212%;
   margin-top: 0;
@@ -385,7 +386,6 @@ body {
 .title {
   font-size: 26px;
   font-weight: 900;
-  font-family: nexablack, sans-serif;
   text-align: left;
   margin: 32px 0px 0px 0px;
   display: -webkit-box;
@@ -462,6 +462,12 @@ body {
   button.mobile-menu {
     display: block;
   }
+  .nav-desktop {
+    display: none;
+  }
+  .title {
+    margin-top: 5px;
+  }
 }
 
 .hamburger:hover {
@@ -504,5 +510,12 @@ button.mobile-menu {
   }
   button.mobile-menu {
     display: block;
+  }
+  .dropd,
+  .uplode-buttons {
+    display: none;
+  }
+  .navigation {
+    display: none;
   }
 }

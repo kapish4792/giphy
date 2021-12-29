@@ -16,151 +16,228 @@
    <header>
       <div class="container">
          <div class="row">
-            <nav class="navbar navbar-expand-lg bg-dark px-0">
+            <nav class="navbar navbar-expand-lg bg-dark px-0 nav-desktop">
                <a class="navbar-brand" href="/">
                   <img class="giphy-logo" src="images/giphy-logo.svg" alt="logo">
                   <h2><strong>GIPHY</strong></h2>
                </a>
-               <button class="mobile-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <div class="navigation ms-5 mt-2">
+                  <ul class="navbar-nav">
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Reactions</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Entertainment</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Sports</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Stickers</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Artists</a>
+                     </li>
+                     <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link hideOnHover" href="#" data-bs-toggle="dropdown"><i
+                              class="fas fa-ellipsis-v"></i></a>
+                        <div class="dropdown-menu megamenu fade-up" role="menu">
+                           <div class="row g-3">
+                              <div class="flex2">
+                                 <div class="col-megamenu ms-6">
+                                    <h6 class="title ms-0">Categories</h6>
+                                    <div class="flex_colums">
+                                       <ul class="list-unstyled mega-list">
+                                          <li><a href="#">GIPHY Studios</a></li>
+                                          <li><a href="#">Animals</a></li>
+                                          <li><a href="#">Actions</a></li>
+                                          <li><a href="#">Anime</a></li>
+                                          <li><a href="#">Cartoons</a></li>
+                                          <li><a href="#">Emotions</a></li>
+                                          <li><a href="#">Food/Drink</a></li>
+                                          <li><a href="#">Gaming</a></li>
+                                          <li><a href="#">Holidays/Greetings</a></li>
+                                          <li><a href="#">Memes</a></li>
+                                          <li><a href="#">Clips</a></li>
+                                       </ul>
+                                    </div>
+
+                                 </div> <!-- col-megamenu.// -->
+                              </div><!-- end col-3 -->
+                              <div class="flex1">
+                                 <div class="col-megamenu">
+                                    <h6 class="title">Stickers</h6>
+                                    <ul class="list-unstyled mega-list">
+                                       <li><a href="#">Originals</a></li>
+                                       <li><a href="#">Trending</a></li>
+                                       <li><a href="#">Reactions</a></li>
+                                       <li><a href="#">Packs</a></li>
+                                    </ul>
+                                 </div> <!-- col-megamenu.// -->
+                              </div><!-- end col-3 -->
+                              <div class="flex1">
+                                 <div class="col-megamenu">
+                                    <h6 class="title">Apps</h6>
+                                    <ul class="list-unstyled mega-list">
+                                       <li><a href="#">GIPHY</a></li>
+                                       <li><a href="#">GIPHY World</a></li>
+                                       <li><a href="#">GIPHY Capture</a></li>
+                                    </ul>
+                                 </div> <!-- col-megamenu.// -->
+                              </div>
+                              <div class="flex2">
+                                 <div class="col-megamenu me-5">
+                                    <h6 class="title">About</h6>
+                                    <div class="flex_colums">
+                                       <ul class="list-unstyled mega-list">
+                                          <li><a href="#">Team</a></li>
+                                          <li><a href="#">Engineering Blog</a></li>
+                                          <li><a href="#">GIPHY Arts</a></li>
+                                          <li><a href="#">Studios</a></li>
+                                          <li><a href="#">Developers</a></li>
+                                          <li><a href="#">Labs</a></li>
+                                          <li><a href="#">FAQ</a></li>
+                                          <li><a href="#">Support</a></li>
+                                          <li><a href="#">Jobs</a></li>
+                                          <li><a href="#">DMCA</a></li>
+                                          <li><a href="#">Guidelines</a></li>
+                                       </ul>
+                                    </div>
+                                 </div> <!-- col-megamenu.// -->
+                              </div><!-- end col-3 -->
+                           </div><!-- end row -->
+                           <div class="Footer">
+                              <div class="Copyright">© 2021 GIPHY, Inc.</div>
+                              <div><a href="#!" target="_blank" rel="noreferrer">Terms of Service</a><a href="#!"
+                                    target="_blank" rel="noreferrer">Community Guidelines</a><a href="#!"
+                                    target="_blank" rel="noreferrer">Privacy Policy</a><a href="#!" target="_blank"
+                                    rel="noreferrer">Copyright</a><span><a href="#!" target="_blank">Manage
+                                       Cookies</a></span> </div>
+                           </div>
+                        </div> <!-- dropdown-mega-menu.// -->
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Artists</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="uplode-buttons">
+                  <a class="uplode-button uplode" href="#">Uplode</a>
+                  <a class="uplode-button create" href="#">Create</a>
+               </div>
+               <div class="dropd">
+                  <img src="images/80h.gif" alt="userbox" width="36px">
+                  <div class="user-menu d-flex">
+                     <div class="username">Kapish Sharma</div>
+                     <div> <i class="fas fa-sort-down"></i></div>
+                     <div class="menu-options">
+                        <ul class="user-option">
+                           <li>
+                              <a href="#" class="nav-sepr">
+                                 Settings
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                                 Favorites
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                                 Log Out
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </nav>
+            <!-- mobile navigation -->
+            <nav class="navbar navbar-expand-lg bg-dark px-0 d-lg-none">
+               <a class="navbar-brand" href="/">
+                  <img class="giphy-logo" src="images/giphy-logo.svg" alt="logo">
+                  <h2><strong>GIPHY</strong></h2>
+               </a>
+               <button class="mobile-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <div class="hamburger" id="hamburger-1">
                      <span class="line"></span>
                      <span class="line"></span>
                      <span class="line"></span>
                   </div>
                </button>
-
-               <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <div class="navigation">
-                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" aria-current="page" href="#">Reactions</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">Entertainment</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">Sports</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">Stickers</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">Artists</a>
-                        </li>
-                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link hideOnHover" href="#" data-bs-toggle="dropdown"><i
-                                 class="fas fa-ellipsis-v"></i></a>
-                           <div class="dropdown-menu megamenu fade-up" role="menu">
-                              <div class="row g-3">
-                                 <div class="flex2">
-                                    <div class="col-megamenu ms-6">
-                                       <h6 class="title ms-0">Categories</h6>
-                                       <div class="flex_colums">
-                                          <ul class="list-unstyled mega-list">
-                                             <li><a href="#">GIPHY Studios</a></li>
-                                             <li><a href="#">Animals</a></li>
-                                             <li><a href="#">Actions</a></li>
-                                             <li><a href="#">Anime</a></li>
-                                             <li><a href="#">Cartoons</a></li>
-                                             <li><a href="#">Emotions</a></li>
-                                             <li><a href="#">Food/Drink</a></li>
-                                             <li><a href="#">Gaming</a></li>
-                                             <li><a href="#">Holidays/Greetings</a></li>
-                                             <li><a href="#">Memes</a></li>
-                                             <li><a href="#">Clips</a></li>
-                                          </ul>
-                                       </div>
-
-                                    </div> <!-- col-megamenu.// -->
-                                 </div><!-- end col-3 -->
-                                 <div class="flex1">
-                                    <div class="col-megamenu">
-                                       <h6 class="title">Stickers</h6>
-                                       <ul class="list-unstyled mega-list">
-                                          <li><a href="#">Originals</a></li>
-                                          <li><a href="#">Trending</a></li>
-                                          <li><a href="#">Reactions</a></li>
-                                          <li><a href="#">Packs</a></li>
-                                       </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                 </div><!-- end col-3 -->
-                                 <div class="flex1">
-                                    <div class="col-megamenu">
-                                       <h6 class="title">Apps</h6>
-                                       <ul class="list-unstyled mega-list">
-                                          <li><a href="#">GIPHY</a></li>
-                                          <li><a href="#">GIPHY World</a></li>
-                                          <li><a href="#">GIPHY Capture</a></li>
-                                       </ul>
-                                    </div> <!-- col-megamenu.// -->
-                                 </div>
-                                 <div class="flex2">
-                                    <div class="col-megamenu me-5">
-                                       <h6 class="title">About</h6>
-                                       <div class="flex_colums">
-                                          <ul class="list-unstyled mega-list">
-                                             <li><a href="#">Team</a></li>
-                                             <li><a href="#">Engineering Blog</a></li>
-                                             <li><a href="#">GIPHY Arts</a></li>
-                                             <li><a href="#">Studios</a></li>
-                                             <li><a href="#">Developers</a></li>
-                                             <li><a href="#">Labs</a></li>
-                                             <li><a href="#">FAQ</a></li>
-                                             <li><a href="#">Support</a></li>
-                                             <li><a href="#">Jobs</a></li>
-                                             <li><a href="#">DMCA</a></li>
-                                             <li><a href="#">Guidelines</a></li>
-                                          </ul>
-                                       </div>
-                                    </div> <!-- col-megamenu.// -->
-                                 </div><!-- end col-3 -->
-                              </div><!-- end row -->
-                              <div class="Footer">
-                                 <div class="Copyright">© 2021 GIPHY, Inc.</div>
-                                 <div><a href="#!" target="_blank" rel="noreferrer">Terms of Service</a><a href="#!"
-                                       target="_blank" rel="noreferrer">Community Guidelines</a><a href="#!"
-                                       target="_blank" rel="noreferrer">Privacy Policy</a><a href="#!" target="_blank"
-                                       rel="noreferrer">Copyright</a><span><a href="#!" target="_blank">Manage
-                                          Cookies</a></span> </div>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                     <li>
+                        <div class="flex2">
+                           <div class="col-megamenu ps-2">
+                              <h6 class="title ms-0">Categories</h6>
+                              <div class="flex_colums">
+                                 <ul class="list-unstyled mega-list">
+                                    <li><a href="#">GIPHY Studios</a></li>
+                                    <li><a href="#">Animals</a></li>
+                                    <li><a href="#">Actions</a></li>
+                                    <li><a href="#">Anime</a></li>
+                                    <li><a href="#">Cartoons</a></li>
+                                    <li><a href="#">Emotions</a></li>
+                                    <li><a href="#">Food/Drink</a></li>
+                                    <li><a href="#">Gaming</a></li>
+                                    <li><a href="#">Holidays/Greetings</a></li>
+                                    <li><a href="#">Memes</a></li>
+                                    <li><a href="#">Clips</a></li>
+                                 </ul>
                               </div>
-                           </div> <!-- dropdown-mega-menu.// -->
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">Artists</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="uplode-buttons d-flex">
-                     <a class="uplode-button " href="#"><button class="btn uplode">Uplode</button></a>
-                     <a class="uplode-button create" href="#"><button class="btn create">Create</button></a>
-                  </div>
-                  <div class="dropd">
-                     <img src="images/80h.gif" alt="userbox" width="36px">
-                     <div class="user-menu d-flex">
-                        <div class="username">Kapish Sharma</div>
-                        <div> <i class="fas fa-sort-down"></i></div>
-                        <div class="menu-options">
-                           <ul class="user-option">
-                              <li>
-                                 <a href="#" class="nav-sepr">
-                                    Settings
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    Favorites
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    Log Out
-                                 </a>
-                              </li>
-                           </ul>
+                           </div>
                         </div>
-                     </div>
-                  </div>
+                     </li>
+                     <li>
+                        <div class="flex1">
+                           <div class="col-megamenu ps-2">
+                              <h6 class="title">Stickers</h6>
+                              <ul class="list-unstyled mega-list">
+                                 <li><a href="#">Originals</a></li>
+                                 <li><a href="#">Trending</a></li>
+                                 <li><a href="#">Reactions</a></li>
+                                 <li><a href="#">Packs</a></li>
+                              </ul>
+                           </div> <!-- col-megamenu.// -->
+                        </div>
+                     </li>
+                     <li>
+                        <div class="flex1">
+                           <div class="col-megamenu ps-2">
+                              <h6 class="title">Apps</h6>
+                              <ul class="list-unstyled mega-list">
+                                 <li><a href="#">GIPHY</a></li>
+                                 <li><a href="#">GIPHY World</a></li>
+                                 <li><a href="#">GIPHY Capture</a></li>
+                              </ul>
+                           </div> <!-- col-megamenu.// -->
+                        </div>
+                     </li>
+                     <li>
+                        <div class="flex2">
+                           <div class="col-megamenu ps-2">
+                              <h6 class="title">About</h6>
+                              <div class="flex_colums">
+                                 <ul class="list-unstyled mega-list">
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Engineering Blog</a></li>
+                                    <li><a href="#">GIPHY Arts</a></li>
+                                    <li><a href="#">Studios</a></li>
+                                    <li><a href="#">Developers</a></li>
+                                    <li><a href="#">Labs</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Support</a></li>
+                                    <li><a href="#">Jobs</a></li>
+                                    <li><a href="#">DMCA</a></li>
+                                    <li><a href="#">Guidelines</a></li>
+                                 </ul>
+                              </div>
+                           </div> <!-- col-megamenu.// -->
+                        </div>
+                     </li>
+                  </ul>
                </div>
             </nav>
          </div>
@@ -217,37 +294,3 @@
 <script src="js/script.js"></script>
 
 </html>
-
-<!-- <div class="slider">
-               <ul id="gif-container">
-
-               </ul>
-               <div class="slider-navigation text-center">
-                  <button id="slideLeft" type="button">&#8656;</button>
-                  <button id="slideRight" type="button">&#8658;</button>
-               </div>
-            </div>
-
-            <section aria-label="Newest Photos">
-               <div class="carousel" data-carousel>
-                  <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-                  <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-                  <ul data-slides>
-                     <li class="slide" data-active>
-                        <img
-                           src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-                           alt="Nature Image #1">
-                     </li>
-                     <li class="slide">
-                        <img
-                           src="https://images.unsplash.com/photo-1638913658642-8f22bae3335b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                           alt="Nature Image #2">
-                     </li>
-                     <li class="slide">
-                        <img
-                           src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-                           alt="Nature Image #3">
-                     </li>
-                  </ul>
-               </div>
-            </section> -->
