@@ -1,0 +1,44 @@
+// search button
+.btn-search {
+  background-image: linear-gradient(
+    45deg,
+    rgb(153, 51, 255) 0%,
+    rgb(255, 102, 102) 100%
+  );
+  color: #fff;
+  border-radius: 0;
+  padding: 7px 15px;
+  font-size: 1.5rem;
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  i {
+    transform: rotate(90deg);
+  }
+}
+// nav uplode buttons
+.uplode-buttons {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 14px;
+  margin-right: 10px;
+  background-size: 200% 50%;
+  background: linear-gradient(103deg, #6157ff, #7067ff, #6157ff);
+
+  a {
+    padding: 8.5px 16px;
+
+    &:first-child {
+      border-right: 4px solid #000;
+    }
+  }
+}
+// hamburger button
+button.mobile-menu {
+  display: none;
+  background: transparent;
+  border: none;
+}

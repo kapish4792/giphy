@@ -111,15 +111,6 @@ $(document).ready(function () {
       $(".btn-search").css("opacity", "1");
     });
 });
-$(document).ready(function () {
-  $(".user-menu").hover(function () {
-    $(".btn-search").css("opacity", "0");
-  }),
-    $(".user-menu").mouseleave(function () {
-      $(".btn-search").css("opacity", "1");
-    });
-});
-
 // Tranding page
 $(document).ready(function () {
   if (window.location.href.indexOf("trandinggifs.html") > -1) {
@@ -140,6 +131,16 @@ $(document).ready(function () {
           gifDiv.appendChild(myImage);
         }
       });
+    searchButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      userInputValue();
+    });
+    searchButton.addEventListener("keypress", (e) => {
+      e.preventDefault();
+      if (e.key === "Enter") {
+        userInputValue();
+      }
+    });
   }
 });
 

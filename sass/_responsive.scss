@@ -1,0 +1,14 @@
+@media all and (max-width: 815px) {
+  .giphy-logo {
+    width: 45% !important;
+  }
+  button.mobile-menu {
+    display: block;
+  }
+  .nav-desktop {
+    display: none;
+  }
+  .title {
+    margin-top: 5px;
+  }
+}

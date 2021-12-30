@@ -1,0 +1,27 @@
+* {
+  list-style: none;
+  a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+html,
+body {
+  background: #121212;
+}
+
+.ms-6 {
+  margin-left: 3.75rem;
+}
+.me-6 {
+  margin-right: 3.75rem;
+}
+.container {
+  max-width: 1040px;
+}
+.bg-dark {
+  background: #121212 !important;
+}
