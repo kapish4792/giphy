@@ -69,7 +69,7 @@ const userInputValue = async function () {
   heading.style.display = "block";
   const showHeading = function () {
     if (inputValue === "") {
-      heading.textContent = `input some value`;
+      heading.textContent = `input some to find something`;
       heading.style.color = "red";
     } else {
       heading.textContent = `Search Results Based on '${inputValue}'`;
