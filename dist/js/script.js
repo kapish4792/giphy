@@ -2,23 +2,25 @@
 
 const searchButton = document.querySelector(".btn-search");
 const gifSlider = document.querySelector("#gif-slider");
-fetch(
-  "https://api.giphy.com/v1/gifs/trending?api_key=pHD5zSJk4mAKyRfNBjt7d36WJLaNF6BO&q=trending&limit=50&offset=0&rating=g"
-)
-  .then((response) => response.json())
-  .then((getdata) => {
-    for (let i = 0; i < getdata.data.length; i++) {
-      // DIV Element
-      var gifDiv = document.createElement("div");
-      gifSlider.append(gifDiv);
-      // Image Eelement
-      const sliderImage = document.createElement("img");
-      sliderImage.setAttribute("src", getdata.data[i].images.original.url);
-      sliderImage.classList.add("gif_src");
-      gifDiv.appendChild(sliderImage);
-    }
-  })
-  .then(() => slider());
+
+const sliderGif = async function () {
+  const response = await fetch(
+    "https://api.giphy.com/v1/gifs/trending?api_key=pHD5zSJk4mAKyRfNBjt7d36WJLaNF6BO&q=trending&limit=50&offset=0&rating=g"
+  );
+  const gifs = await response.json();
+
+  for (const gif of gifs.data) {
+    const gifDiv = document.createElement("div");
+    gifSlider.append(gifDiv);
+
+    const sliderImage = document.createElement("img");
+    sliderImage.setAttribute("src", gif.images.original.url);
+    sliderImage.classList.add("gif_src");
+    gifDiv.appendChild(sliderImage);
+  }
+  slider();
+};
+sliderGif();
 
 // sliderJS
 const slider = function () {
@@ -55,40 +57,39 @@ const slider = function () {
     ],
   });
 };
-
 // EventListenr
-const userInputValue = function () {
-  const gifSearchResult = document.querySelector("#gifserachresult");
-  const inputValue = document.getElementById("search_bar").value;
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=pHD5zSJk4mAKyRfNBjt7d36WJLaNF6BO`;
-  const topic = `&q=${inputValue}`;
-  const limit = `&limit=50&offset=0&rating=g`;
+const userInputValue = async function () {
+  let gifSearchResult = document.querySelector("#gifserachresult");
+  let inputValue = document.getElementById("search_bar").value;
+  let url = `https://api.giphy.com/v1/gifs/search?api_key=pHD5zSJk4mAKyRfNBjt7d36WJLaNF6BO`;
+  let topic = `&q=${inputValue}`;
+  let limit = `&limit=50&offset=0&rating=g`;
   // heading
+  const heading = document.querySelector(".heading");
+  heading.style.display = "block";
   const showHeading = function () {
-    const heading = document.querySelector(".heading");
-    heading.style.display = "block";
-    heading.textContent = `Search Results Based on '${inputValue}'`;
+    if (inputValue === "") {
+      heading.textContent = `input some value`;
+      heading.style.color = "red";
+    } else {
+      heading.textContent = `Search Results Based on '${inputValue}'`;
+      heading.style.color = "#fff";
+    }
   };
-  setTimeout(showHeading, 2500);
 
-  // looping over api response
-  fetch(url + topic + limit)
-    .then((response) => response.json())
-    .then((getdata) => {
-      while (gifSearchResult.firstChild) {
-        gifSearchResult.removeChild(gifSearchResult.firstChild);
-      }
-      return getdata;
-    })
-    .then((getdata) => {
-      for (let i = 0; i < getdata.data.length; i++) {
-        var searchImage = document.createElement("img");
-        searchImage.setAttribute("src", getdata.data[i].images.original.url);
-        searchImage.classList.add("gif_search");
-        gifSearchResult.appendChild(searchImage);
-      }
-    });
-  inputValue.value = " ";
+  const response = await fetch(url + topic + limit);
+  const gifs = await response.json();
+  while (gifSearchResult.firstChild) {
+    gifSearchResult.removeChild(gifSearchResult.firstChild);
+  }
+
+  for (const gif of gifs.data) {
+    var searchImage = document.createElement("img");
+    searchImage.setAttribute("src", gif.images.original.url);
+    searchImage.classList.add("gif_search");
+    gifSearchResult.appendChild(searchImage);
+  }
+  showHeading();
 };
 // search result input
 searchButton.addEventListener("click", (e) => {
@@ -112,25 +113,22 @@ $(document).ready(function () {
     });
 });
 // Tranding page
-$(document).ready(function () {
+$(document).ready(async function () {
   if (window.location.href.indexOf("trandinggifs.html") > -1) {
     const trendingGifs = document.querySelector("#trendingGifs");
-    fetch(
+    const response = await fetch(
       "https://api.giphy.com/v1/gifs/trending?api_key=pHD5zSJk4mAKyRfNBjt7d36WJLaNF6BO&q=trending&limit=50&offset=0&rating=g"
-    )
-      .then((response) => response.json())
-      .then((getdata) => {
-        for (let i = 0; i < getdata.data.length; i++) {
-          // DIV Element
-          var gifDiv = document.createElement("div");
-          trendingGifs.append(gifDiv);
-          // Image Eelement
-          var myImage = document.createElement("img");
-          myImage.setAttribute("src", getdata.data[i].images.original.url);
-          myImage.classList.add("gif_src");
-          gifDiv.appendChild(myImage);
-        }
-      });
+    );
+    const gifs = await response.json();
+    for (const gif of gifs.data) {
+      var gifDiv = document.createElement("div");
+      trendingGifs.append(gifDiv);
+
+      var myImage = document.createElement("img");
+      myImage.setAttribute("src", gif.images.original.url);
+      myImage.classList.add("gif_src");
+      gifDiv.appendChild(myImage);
+    }
   }
 });
 
