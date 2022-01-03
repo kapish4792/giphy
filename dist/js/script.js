@@ -131,16 +131,6 @@ $(document).ready(function () {
           gifDiv.appendChild(myImage);
         }
       });
-    searchButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      userInputValue();
-    });
-    searchButton.addEventListener("keypress", (e) => {
-      e.preventDefault();
-      if (e.key === "Enter") {
-        userInputValue();
-      }
-    });
   }
 });
 
