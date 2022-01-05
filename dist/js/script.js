@@ -22,6 +22,7 @@ const sliderGif = async function () {
 };
 sliderGif();
 
+
 // sliderJS
 const slider = function () {
   $('.responsive').slick({
